@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="islamic.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lilita+One&display=swap" rel="stylesheet" />
+  <title>Islamic Festivals | Festivals</title>
+ <!-- font awesome cdn -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: black;
+    }
+
+    .logo-font {
+      font-family: 'Lilita One', cursive;
+    }
+
+    nav {
+      background: black;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 10;
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .slogan {
+      display: none;
+      margin-right: 200px;
+      color: white;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .nav-links a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: dodgerblue;
+    }
+
+    .signin-btn {
+      background-color: #2563eb;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-left: 12px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .signin-btn:hover {
+      background-color: #1e40af;
+    }
+
+    .menu-btn {
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      display: block;
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 16px;
+      background-color: black;
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: white;
+      padding: 8px 0;
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover {
+      color: dodgerblue;
+    }
+
+    @media (min-width: 768px) {
+      .slogan {
+        display: flex;
+        flex-direction: column;
+        margin-left: 16px;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+      }
+
+      .menu-btn {
+        display: none;
+      }
+    }
+
+    header {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 50px;
+color: white
+;    }
+
+    header p {
+color: white;      text-align: center;
+      line-height: normal;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .section h2 {
+      font-weight: bold;
+      text-align: center;
+      font-size: 45px;
+ color: white;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .image-gallery img {
+      width: 30%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .download-link {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #2563eb;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .download-link:hover {
+      background-color: #1e40af;
+    }
+
+    @media (max-width: 768px) {
+      .image-gallery img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .filter-buttons {
+  
+      margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 9999px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #2d2d2d; /* dark gray */
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #444;
+}
+
+.filter-btn.active {
+  background-color: #7c3aed; /* purple */
+  color: white;
+}
+.site-footer {
+  background-color: #2f2f2f;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #fff;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 15px;
+  color: #ccc;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #888;
+}
+
+
+
+  
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+    <nav  style="position: fixed; top: 0; left: 0; width: 100%; background: black; z-index: 1000;">
+    <div class="navbar-container">
+      <div class="logo logo-font">Festivals</div>
+      <div class="slogan">
+        <span>Culture. Unlocked.</span>
+        <span>From Eid to Diwali — One World, All Celebrations.</span>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="festivals.html">Festivals</a>
+        <a href="books.html">Books</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="askqueries.html" class="signin-btn">FAQ</a>
+      </div>
+      <button class="menu-btn" id="menu-btn">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="home.html">Home</a>
+      <a href="festivals.html">Festivals</a>
+      <a href="books.html">Books</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="askqueries.html" class="signin-btn">FAQ</a>
+    </div>
+  </nav>
+
+ <div class="filter-buttons" style="margin-top: 100px;">
+  <a href="festivals.html"><button class="filter-btn">All Religions</button></a>
+  <a href="islamic.html"><button class="filter-btn">Islamic</button></a>
+  <a href="christian.html"><button class="filter-btn active">Christian</button></a>
+  <a href="indian.html"><button class="filter-btn">Hinduism</button></a>
+  <a href="chinese.html"><button class="filter-btn">Chinese</button></a>
+</div>
+
+  <!-- CHristians FESTIVALS -->
+  <header>
+    <h1>Christians Festivals</h1>
+    <p> Christians celebrate Christmas and Easter celebrate the birth and resurrection of Jesus Christ, marking the most significant events in the Christian faith.</p>
+  </header>
+
+  <section class="section">
+    <h2 class="festival-title">Merry Christmas</h2>
+    <div class="image-gallery">
+      <img src="./images/1santa.jpg" alt="">
+      <img src="./images/christmas3.jpg" alt="">
+      <img src="./images/chritsmas.jpg" alt="">
+    </div>
+    <p class="description">
+     Christmas is one of the most widely celebrated Christian festivals, observed on December 25th to commemorate the birth of Jesus Christ. Rooted in religious tradition, it symbolizes hope, peace, and the arrival of the Savior. Over time, Christmas has also become a global cultural celebration, marked by decorating trees, exchanging gifts, and festive gatherings. Churches hold special services, and families come together to share meals and reflect on the values of generosity and love that the season represents.  </p>
+    <a class="download-link" href="./The History of Christmas.pdf" download>📥 Download info(PDF)</a>
+  
+  <section class="section">
+  <h2 class="festival-title"> First Christmas</h2>
+  <p class="description">
+    <strong>Date:</strong> Traditionally, Christmas is celebrated on December 25, but the exact date of Jesus’ birth is unknown. Jesus is believed to have been born around 4 to 6 BCE.<br>
+    <strong>Place:</strong> Bethlehem, Judea (modern-day West Bank).<br>
+    <strong>Details:</strong> The earliest Christians did not celebrate Jesus’ birth as a formal holiday. The December 25th date was officially established in the 4th century CE during the reign of Emperor Constantine, aligning with Roman pagan festivals.
+  </p>
+</section>
+
+  
+  </section>
+
+  <section class="section" style="margin-top: 90px;">
+    <h2 class="festival-title"> Happy Easter Day</h2>
+    <div class="image-gallery">
+      <img src="./images/easter.jpg" alt="">
+      <img src="./images/easter2.jpg" alt="">
+      <img src="./images/easterchrist.webp" alt="">
+    </div>
+    <p class="description">
+    Easter is the most significant celebration in Christianity, honoring the resurrection of Jesus Christ from the dead after His crucifixion, as described in the New Testament. Observed on a Sunday in spring, it marks the end of Holy Week and follows Good Friday. Easter symbolizes renewal, hope, and victory over sin and death. Christians attend special church services, and the day is often celebrated with traditions like egg hunts, family meals, and vibrant decorations, representing new life and resurrection.
+    </p>
+    <a class="download-link" href="./The History of Easter.pdf" download>📥 Download info(PDF)</a>
+  <section class="section">
+  <h2 class="festival-title"> First Easter</h2>
+  <p class="description" style="margin-bottom: 70px;">
+    <strong>Date:</strong> The first Easter occurred shortly after the crucifixion of Jesus, believed to be around 30–33 CE.<br>
+    <strong>Place:</strong> Jerusalem, Judea.<br>
+    <strong>Details:</strong> Easter commemorates the resurrection of Jesus, celebrated initially by his followers in Jerusalem. The exact date varies yearly since it depends on the lunar calendar and the Jewish Passover.
+  </p>
+</section>
+
+  
+  </section>
+
+
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Festivals</h3>
+      <p>Culture. Unlocked.<br>From Eid to Diwali — One World, All Celebrations.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#"> Support</a></li>
+
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <h3 style="margin-bottom: 10px;">Contact</h3>
+      <p style="margin: 5px 0;">Festivals</p>
+      <p><i class="fas fa-map-marker-alt"></i> Aptech Gulshan-e-Iqbal, RhimJhim Shopping Center, Karachi</p>
+      <p><i class="fas fa-envelope"></i> info@festivals.com</p>
+      <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Festivals. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+
+</body>
+</html>

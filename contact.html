@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="islamic.css"></script>
+  <title>Contact | Festivals</title>
+  <!-- font awesome cdn -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  body{
+   margin: 0;
+    background-color: black;
+      font-family: 'Inter', sans-serif; 
+    color: white;
+  }  
+
+nav a {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a, nav button {
+  color: white;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+nav a.active {
+  border-bottom: 2px solid #fff;
+}
+
+    .logo-font {
+      color: white;
+    }
+
+    nav {
+      background: black
+      ;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      position: relative;
+      z-index: 10;
+      margin-left: 0px;
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+  color: white;
+    }
+
+    .slogan {
+      /* margin-left: 120px; */
+      display: none;
+      margin-right: 200px;
+      color: white;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .nav-links a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+
+   .nav-links a:hover {
+      color: skyblue;
+    }
+    .signin-btn {
+      background-color: rgb(20, 20, 169);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-left: 12px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .signin-btn:hover {
+      background-color: rgb(20, 20, 169);
+    
+    }
+
+    .menu-btn {
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      display: block;
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 16px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: white;
+      padding: 8px 0;
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover {
+      color:skyblue;
+    }
+
+
+    @media (min-width: 768px) {
+      .slogan {
+        display: flex;
+        flex-direction: column;
+        margin-left: 16px;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+      }
+
+      .menu-btn {
+        display: none;
+      }
+
+    }
+   
+
+  .contact-section {
+    margin-top: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      background-color: transparent;
+      background-size: cover;
+      position: relative;
+    }
+
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+
+    .contact-box {
+      display: flex;
+      flex: 1 1 100%;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .contact-form, .map-container {
+      flex: 1 1 50%;
+      padding: 30px;
+      box-sizing: border-box;
+      min-width: 300px;
+    }
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: white;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 15px;
+      font-size: 14px;
+      color: white;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .contact-form button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 5px;
+    }
+
+    .map-container {
+      min-height: 400px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-form, .map-container {
+        flex: 1 1 100%;
+      }
+
+      .map-container {
+        min-height: 300px;
+      }
+    }
+
+   .site-footer {
+  background-color: #191818;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #fff;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 15px;
+  color: #ccc;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #888;
+}
+
+</style>
+
+</head>
+<body>
+ <!-- Navbar -->
+ <nav  style="position: fixed; top: 0; left: 0; width: 100%; background: black; z-index: 1000;">
+    <div class="navbar-container">
+      <div class="logo logo-font">Festivals</div>
+
+          <div class="slogan">
+
+        <span>Culture. Unlocked.</span>
+        <span>From Eid to Diwali — One World, All Celebrations.</span>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="festivals.html">Festivals</a>
+        <a href="books.html">Books</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="askqueries.html" class="signin-btn">FAQ</a>
+      </div>
+      <button class="menu-btn" id="menu-btn">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="home.html">Home</a>
+      <a href="festivals.html">Festivals</a>
+      <a href="books.html">Books</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="askqueries.html" class="signin-btn">FAQ</a>
+    </div>
+  </nav>
+<!-- Contact Us Section -->
+<div class="contact-section">
+  <div class="contact-box">
+    <form class="contact-form" id="contactForm">
+      <h2>Contact Us</h2>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required placeholder="Enter Your Name" />
+      <label for="email">Email</label>
+      <input type="email" id="email" required placeholder="you@example.com" />
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" required placeholder="Write your message..."></textarea>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.1583343775565!2d67.0927060741442!3d24.926675477886043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb338caa5ac57cb%3A0x2c4b1fc512ab6bb!2sAptech%20Gulshan-e-Iqbal!5e0!3m2!1sen!2s!4v1747865635863!5m2!1sen!2s" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+
+ <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Festivals</h3>
+      <p>Culture. Unlocked.<br>From Eid to Diwali — One World, All Celebrations.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#"> Support</a></li>
+
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <h3 style="margin-bottom: 10px;">Contact</h3>
+      <p style="margin: 5px 0;">Festivals</p>
+      <p><i class="fas fa-map-marker-alt"></i> Aptech Gulshan-e-Iqbal, RhimJhim Shopping Center, Karachi</p>
+      <p><i class="fas fa-envelope"></i> info@festivals.com</p>
+      <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Festivals. All rights reserved.</p>
+  </div>
+</footer>
+<!-- footer end -->
+</body>
+<script src="app.js"></script>
+<script>
+  document.getElementById("menu-btn").addEventListener("click", function () {
+      const menu = document.getElementById("mobile-menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+</script>
+</body>
+</html>

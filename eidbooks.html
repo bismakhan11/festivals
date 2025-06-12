@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Festivals | christmas Books</title>
+  <link rel="stylesheet" href="books.css">
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lilita+One&display=swap" rel="stylesheet" />
+<!-- font awesome cdn -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+     font-family: 'Inter', sans-serif; 
+
+    }
+
+    .logo-font {
+        color: white;
+    }
+
+    nav {
+      background: #000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      position: relative;
+      z-index: 10;
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+  
+    }
+
+    .slogan {
+      color: white;
+      /* margin-left: 120px; */
+      display: none;
+      margin-right: 200px;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .nav-links a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: white;
+      font-size: 13px;
+    }
+
+    .nav-links a:hover {
+      color: skyblue;
+    }
+    .signin-btn {
+      background-color: rgb(20, 20, 169);
+      color: white;
+      padding: 6px 15px;
+      border-radius: 4px;
+      margin-left: 10px;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .signin-btn:hover {
+      background-color: rgb(20, 20, 169);
+    
+    }
+
+    .menu-btn {
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      display: block;
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 16px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: white;
+      padding: 8px 0;
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover {
+      color:skyblue;
+    }
+
+    @media (min-width: 768px) {
+      .slogan {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+      }
+
+.signin-btn{
+       padding-right: 20px;
+        padding-left: 20px;
+        margin-left: 20px;
+        align-items: center;
+      }
+
+      .menu-btn {
+        display: none;
+      }
+    }
+
+    .site-footer {
+  background-color: #2f2f2f;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #fff;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 15px;
+  color: #ccc;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #888;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+   <nav> <!--   style="position: fixed; top: 0; left: 0; width: 100%; background: black; z-index: 1000;"> --> 
+    <div class="navbar-container">
+      <div class="logo logo-font">Festivals</div>
+      
+      <div class="slogan">
+        <span class="text-sm">Culture. Unlocked.</span>
+        <span class="text-xs">From Eid to Diwali — One World, All Celebrations.</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="festivals.html">Festivals</a>
+        <a href="books.html">Books</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="signin.html" class="signin-btn">Sign In</a>
+      </div>
+
+      <button class="menu-btn" id="menu-btn">☰</button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="home.html">Home</a>
+      <a href="festivals.html">Festivals</a>
+      <a href="books.html">Books</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+    <a href=" contact.html">Contact</a>
+      <a href="signin.html" class="signin-btn">Sign In</a>
+    </div>
+  </nav>
+
+  <!-- Cart Button -->
+  <button id="openCart">🛒 View Cart (<span id="cartCount">0</span>)</button>
+
+  <!-- Cart -->
+  <div id="cartSidebar">
+    <div class="header">
+      <h2>Your Cart</h2>
+      <button onclick="toggleCart(false)" style="float:right; font-size:20px;">&times;</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+        <strong>Total:</strong> <span id="cartTotal">PKR 0</span>
+      </div>
+      <button class="checkout">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <section class="header text-center">
+    <h1>Eid-ul-Adha Books for Children</h1>
+    <p>Explore the meaning and spirit of Eid-ul-Adha through beautifully illustrated stories for kids.</p>
+  </section>
+
+  <!-- Book1 -->
+  <section class="container grid">
+    <div class="card">
+      <img src="./images/book1.jpg" alt="Book 1" />
+      <h2>The Big Eid Feast</h2>
+      <p>A journey of a family preparing for Eid from prayer to feast.</p>
+      <div class="actions">
+        <a href="./images/pdf3.pdf" download>📥 Download PDF</a>
+        <button onclick="addToCart({ id: 'book1', title: 'The Big Eid Feast', price: 500 })">🛒 Buy Now</button>
+      </div>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <ul>
+          <li>⭐️⭐️⭐️⭐️ “Great explanation for kids.”</li>
+          <li>⭐️⭐️⭐️⭐️⭐️ “Perfect for Eid reading!”</li>
+        </ul>
+      </div>
+    </div>
+
+<!-- book2 -->
+<div class="card">
+      <img src="./images/eidbook11.jpg" alt="Book2" />
+      <h2>EID STORY</h2>
+      <p>The eid surprise</p>
+      <div class="actions">
+        <a href="./The_Quest_for_the_Christmas_Star.pdf" download>📥 Download PDF</a>
+        <button onclick="addToCart({ id: 'book2', title: 'eid story', price: 500 })">🛒 Buy Now</button>
+      </div>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <ul>
+          <li>⭐️⭐️⭐️⭐️ “Great explanation for kids.”</li>
+          <li>⭐️⭐️⭐️⭐️⭐️ “Perfect for Eid reading!”</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- book3 -->
+     <div class="card">
+      <img src="./images/eidbook12.jpg" alt="Book3 " />
+      <h2>My First Eid</h2>
+      <p>A fun journey of a childrens preparing for Eid</p>
+      <div class="actions">
+        <a href="./the-christmas-treasure-quest.pdf" download>📥 Download PDF</a>
+        <button onclick="addToCart({ id: 'book3', title: 'my first eid', price: 600 })">🛒 Buy Now</button>
+      </div>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <ul>
+          <li>⭐️⭐️⭐️⭐️ “Great explanation for kids.”</li>
+          <li>⭐️⭐️⭐️⭐️⭐️ “Perfect for Eid reading!”</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- book4 -->
+     <div class="card">
+      <img src="./images/eidbook13.jpg" alt="Book 4" />
+      <h2>Counting Stars on EID Night</h2>
+      <p>Chasing the Moon Light</p>
+      <div class="actions">
+        <a href="./-the-christmas-star-quest-.pdf" download>📥 Download PDF</a>
+        <button onclick="addToCart({ id: 'book4', title: 'counting stars on eidnight', price: 1100 })">🛒 Buy Now</button>
+      </div>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <ul>
+          <li>⭐️⭐️⭐️⭐️ “Great explanation for kids.”</li>
+          <li>⭐️⭐️⭐️⭐️⭐️ “Perfect for Eid reading!”</li>
+        </ul>
+      </div>
+    </div>
+    <!-- book5 -->
+     <div class="card">
+      <img src="./images/bookk5.jpg" alt="Book 5" />
+      <h2>Eid Moon Magic</h2>
+      <p>Whispers of the Eid List</p>
+      <div class="actions">
+        <a href="./-the-christmas-list-secret-.pdf" download>📥 Download PDF</a>
+        <button onclick="addToCart({ id: 'book5', title: 'Eid moon magic', price: 700 })">🛒 Buy Now</button>
+      </div>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <ul>
+          <li>⭐️⭐️⭐️⭐️ Great explanation for kids.</li>
+          <li>⭐️⭐️⭐️⭐️⭐️ “Perfect for christmas fun reading!”</li>
+        </ul>
+      </div>
+    </div>
+    <!-- book5 -->
+     <div class="card">
+      <img src="./images/bookk5.jpg" alt="Book 7" />
+      <h2>Eid Moon Magic</h2>
+      <p>Whispers of the Eid List</p>
+      <div class="actions">
+        <a href="./-the-christmas-list-secret-.pdf" download>📥 Download PDF</a>
+        <button onclick="addToCart({ id: 'book7', title: 'Eid moon magic', price: 700 })">🛒 Buy Now</button>
+      </div>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <ul>
+          <li>⭐️⭐️⭐️⭐️ Great explanation for kids.</li>
+          <li>⭐️⭐️⭐️⭐️⭐️ “Perfect for christmas fun reading!”</li>
+        </ul>
+      </div>
+    </div>
+    <!-- book5 -->
+     <div class="card">
+      <img src="./images/bookk5.jpg" alt="Book 6" />
+      <h2>Eid Moon Magic</h2>
+      <p>Whispers of the Eid List</p>
+      <div class="actions">
+        <a href="./-the-christmas-list-secret-.pdf" download>📥 Download PDF</a>
+        <button onclick="addToCart({ id: 'book6', title: 'Eid moon magic', price: 700 })">🛒 Buy Now</button>
+      </div>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <ul>
+          <li>⭐️⭐️⭐️⭐️ Great explanation for kids.</li>
+          <li>⭐️⭐️⭐️⭐️⭐️ “Perfect for christmas fun reading!”</li>
+        </ul>
+      </div>
+    </div>
+     <!-- book3 -->
+     <div class="card">
+      <img src="./images/eidbook12.jpg" alt="Book8 " />
+      <h2>My First Eid</h2>
+      <p>A fun journey of a childrens preparing for Eid</p>
+      <div class="actions">
+        <a href="./the-christmas-treasure-quest.pdf" download>📥 Download PDF</a>
+        <button onclick="addToCart({ id: 'book8', title: 'my first eid', price: 600 })">🛒 Buy Now</button>
+      </div>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <ul>
+          <li>⭐️⭐️⭐️⭐️ “Great explanation for kids.”</li>
+          <li>⭐️⭐️⭐️⭐️⭐️ “Perfect for Eid reading!”</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Festivals</h3>
+      <p>Culture. Unlocked.<br>From Eid to Diwali — One World, All Celebrations.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#"> Support</a></li>
+
+      </ul>
+    </div>
+
+
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <h3 style="margin-bottom: 10px;">Contact</h3>
+      <p style="margin: 5px 0;">Festivals</p>
+      <p><i class="fas fa-map-marker-alt"></i> Aptech Gulshan-e-Iqbal, RhimJhim Shopping Center, Karachi</p>
+      <p><i class="fas fa-envelope"></i> info@festivals.com</p>
+      <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Festivals. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!--  Cart  -->
+  <script>
+    const cart = [];
+
+    function toggleCart(open) {
+      document.getElementById("cartSidebar").classList.toggle("open", open);
+    }
+
+    document.getElementById("openCart").addEventListener("click", () => toggleCart(true));
+
+    function addToCart(book) {
+      const existing = cart.find(item => item.id === book.id);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...book, qty: 1 });
+      }
+      updateCart();
+    }
+
+    function removeFromCart(id) {
+      const index = cart.findIndex(item => item.id === id);
+      if (index !== -1) cart.splice(index, 1);
+      updateCart();
+    }
+
+    function updateCart() {
+      const container = document.getElementById("cartItems");
+      const count = document.getElementById("cartCount");
+      const totalDisplay = document.getElementById("cartTotal");
+
+      container.innerHTML = '';
+      let total = 0;
+
+      cart.forEach(item => {
+        total += item.price * item.qty;
+        container.innerHTML += `
+          <div class="cart-item">
+            <div>
+              ${item.title} <br/>
+              <small>Qty: ${item.qty}</small>
+            </div>
+            <div>
+              PKR ${item.price * item.qty}
+              <button onclick="removeFromCart('${item.id}')" style="color:red;">&times;</button>
+            </div>
+          </div>`;
+      });
+
+      count.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+      totalDisplay.textContent = `PKR ${total}`;
+    }
+
+    document.getElementById("menu-btn").addEventListener("click", function () {
+      const menu = document.getElementById("mobile-menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Document</title>
+</head>
+<style>
+    
+   body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: black;
+      color:white;
+    }
+.logo font{
+  font-weight: bold;
+}
+
+    nav {
+      background: #000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      position: relative;
+      z-index: 10;
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+  
+    }
+
+    .slogan {
+      /* margin-left: 120px; */
+      display: none;
+      margin-right: 200px;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .nav-links a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+
+     .nav-links a:hover {
+      color: skyblue;
+    }
+    .signin-btn {
+      background-color: rgb(20, 20, 169);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-left: 12px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .signin-btn:hover {
+      background-color: rgb(20, 20, 169);
+    
+    }
+
+    .menu-btn {
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      display: block;
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 16px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: white;
+      padding: 8px 0;
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover {
+      color:skyblue;
+    }
+
+
+    @media (min-width: 768px) {
+      .slogan {
+        display: flex;
+        flex-direction: column;
+        margin-left: 16px;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+      }
+
+      .menu-btn {
+        display: none;
+      }
+    }
+  
+     
+    .about-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .about-section img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(47, 82, 130, 0.3);
+    object-fit: cover;
+  }
+
+  .about-content {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .about-content h2 {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .about-content p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+color: whitesmoke;  }
+
+  @media (min-width: 768px) {
+    .about-section {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+    .about-content {
+      padding-left: 2rem;
+    }
+
+    .site-footer {
+  background-color: #191818;
+  color: #ccc;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #fff;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 15px;
+  color: #ccc;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #888;
+}
+   
+</style>
+
+<body>
+<!-- Navbar -->
+  <nav>
+    <div class="navbar-container">
+      <div class="logo logo-font">Festivals</div>
+
+      <div class="slogan">
+        <span>Culture. Unlocked.</span>
+        <span>From Eid to Diwali — One World, All Celebrations.</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="festivals.html">Festivals</a>
+        <a href="books.html">Books</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="askqueries.html" class="signin-btn">FAQ</a>
+      </div>
+
+      <button class="menu-btn" id="menu-btn">☰</button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="home.html">Home</a>
+      <a href="festivals.html">Festivals</a>
+      <a href="books.html">Books</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="askqueries.html" class="signin-btn">FAQ</a>
+    </div>
+  </nav>
+
+
+<section class="about-section">
+  <img
+    src="./free-photo-of-fireworks-in-a-city-at-night.jpeg"
+    alt="Lanterns Night"
+  />
+  <div class="about-content">
+    <h2>About Us!</h2>
+    <p>
+      Festivals is a digital hub that celebrates cultural diversity through the lens of global festivals.
+      Our platform brings together stories, traditions, and visuals from celebrations around the world — 
+      from the lights of Diwali to the spirit of Lunar New Year. With a modern and inclusive approach, 
+      Festivals is your gateway to discovering the beauty of our shared humanity through festive moments.
+    </p>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Festivals</h3>
+      <p>Culture. Unlocked.<br>From Eid to Diwali — One World, All Celebrations.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="festivals.html">Festivals</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-envelope"></i> info@festivals.com</p>
+      <p><i class="fas fa-phone"></i> +92 123 4567890</p>
+      <p><i class="fas fa-map-marker-alt"></i> Atrium Mall, Zainab Market, Karachi</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Festivals. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- js -->
+ <script>
+    document.getElementById("menu-btn").addEventListener("click", function () {
+      const menu = document.getElementById("mobile-menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+  </script>
+</body>
+</html>

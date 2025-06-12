@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Festival FAQs</title>
+  <!-- font awesome cdn -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #4caf50;
+    }
+
+    .faq-item {
+      background-color: #1a1a1a;
+      margin-bottom: 15px;
+      padding: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .faq-item:hover {
+      background-color: #2a2a2a;
+    }
+
+    .faq-question {
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .faq-answer {
+      margin-top: 10px;
+      display: none;
+      line-height: 1.6;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-size: 24px;
+      top: 18px;
+      color: #4caf50;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active::after {
+      content: '-';
+      transform: rotate(180deg);
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .logo-font {
+        color: white;
+    }
+
+    nav {
+      background: #000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      position: relative;
+      z-index: 10;
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+  
+    }
+
+    .slogan {
+      /* margin-left: 120px; */
+      display: none;
+      margin-right: 200px;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .nav-links a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: white;
+      font-size: 13px;
+    }
+
+  .nav-links a:hover {
+      color: skyblue;
+    }
+    .signin-btn {
+      background-color: rgb(20, 20, 169);
+      color: white;
+      padding: 6px 15px;
+      border-radius: 4px;
+      margin-left: 10px;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .signin-btn:hover {
+      background-color: rgb(20, 20, 169);
+    
+    }
+
+    .menu-btn {
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      display: block;
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 16px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: white;
+      padding: 8px 0;
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover {
+      color:skyblue;
+    }
+
+    @media (min-width: 768px) {
+      .slogan {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+      }
+
+.signin-btn{
+       padding-right: 20px;
+        padding-left: 20px;
+        margin-left: 20px;
+        align-items: center;
+      }
+
+      .menu-btn {
+        display: none;
+      }
+    }
+
+    .site-footer {
+  background-color: #191818;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #fff;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 15px;
+  color: #ccc;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #888;
+}
+
+
+  </style>
+</head>
+<body>
+
+ <!-- Navbar -->
+   <nav style="position: fixed; top: 0; left: 0; width: 100%; background: black; z-index: 1000;"> 
+    <div class="navbar-container">
+      <div class="logo logo-font">Festivals</div>
+      
+      <div class="slogan">
+        <span class="text-sm">Culture. Unlocked.</span>
+        <span class="text-xs">From Eid to Diwali — One World, All Celebrations.</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="festivals.html">Festivals</a>
+        <a href="books.html">Books</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="askqueries.html" class="signin-btn">FAQ</a>
+      </div>
+
+      <button class="menu-btn" id="menu-btn">☰</button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="home.html">Home</a>
+      <a href="festivals.html">Festivals</a>
+      <a href="books.html">Books</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+    <a href=" contact.html">Contact</a>
+      <a href="askqueries.html" class="signin-btn">FAQ</a>
+    </div>
+  </nav>
+
+<!-- FAQ -->
+  <div class="faq-container" style="margin-top: 100px;">
+    <h1>FAQs</h1>
+
+    <div class="faq-item">
+      <div class="faq-question">What is the purpose of cultural festivals?</div>
+      <div class="faq-answer">
+        Cultural festivals celebrate traditions, promote diversity, and bring communities together. They help preserve heritage and educate people about different cultures through food, music, art, and rituals.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How can I participate in a festival I’m unfamiliar with?</div>
+      <div class="faq-answer">
+        Research the festival’s background, attend public events, respect customs, and engage with locals. Participating with openness and respect ensures a meaningful and enjoyable experience.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Are Unifest festivals family-friendly?</div>
+      <div class="faq-answer">
+        Yes, Unifest festivals are designed to be inclusive and welcoming to families, offering child-friendly activities, cultural performances, and safe environments for all age groups.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can businesses collaborate or sponsor festivals?</div>
+      <div class="faq-answer">
+        Absolutely! Businesses are encouraged to collaborate through sponsorships, booths, or cultural partnerships. Reach out through our Contact page to explore options.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How are different festivals selected for inclusion?</div>
+      <div class="faq-answer">
+        Festivals are selected based on cultural relevance, community interest, and educational value. We aim to represent a wide variety of global cultures in an inclusive manner.
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Festivals</h3>
+      <p>Culture. Unlocked.<br>From Eid to Diwali — One World, All Celebrations.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="festivals.html">Festivals</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-envelope"></i> info@festivals.com</p>
+      <p><i class="fas fa-phone"></i> +92 123 4567890</p>
+      <p><i class="fas fa-map-marker-alt"></i> Atrium Mall, Zainab Market, Karachi</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Festivals. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script>
+    const items = document.querySelectorAll('.faq-item');
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+    document.getElementById("menu-btn").addEventListener("click", function () {
+      const menu = document.getElementById("mobile-menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+  </script>
+
+</body>
+</html>
